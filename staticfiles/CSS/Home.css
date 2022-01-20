@@ -1,0 +1,196 @@
+ .u-section-1 {
+  background: url("../images/poetry-bg-1.jpg");
+  background-position: 50% 0%;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 474px;
+}
+
+.u-section-1 .u-text-1 {
+  font-weight: 700;
+  margin: 126px 150px 0 auto;
+}
+
+.u-section-1 .u-text-2 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin: 43px 0 0 393px;
+}
+
+.u-section-1 .u-btn-1 {
+  background-image: none;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  letter-spacing: 2px;
+  margin: 43px 246px 0 auto;
+  padding: 6px 24px 7px 23px;
+}
+
+.u-section-1 .u-btn-2 {
+  background-image: none;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  letter-spacing: 2px;
+  margin: -42px 389px 60px auto;
+  padding: 6px 24px 7px 23px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 391px;
+  }
+
+  .u-section-1 .u-text-1 {
+    width: auto;
+    margin-top: 73px;
+    margin-right: 93px;
+  }
+
+  .u-section-1 .u-text-2 {
+    width: auto;
+    margin-left: 337px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-right: 202px;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-right: 338px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 393px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-top: 88px;
+    margin-right: 63px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: 148px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-right: 161px;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 410px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-top: 114px;
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: 44px;
+    font-weight: normal;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-top: 44px;
+    margin-right: 135px;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-bottom: 50px;
+    margin-left: 158px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 450px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-top: 120px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-top: 31px;
+    margin-right: 55px;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-bottom: 60px;
+    margin-left: 43px;
+  }
+}.u-section-2 .u-sheet-1 {
+  min-height: 546px;
+}
+
+.u-section-2 .u-text-1 {
+  margin: 41px auto 0;
+}
+
+.u-section-2 .u-form-1 {
+  height: 281px;
+  width: 570px;
+  margin: 30px auto 0;
+}
+
+.u-section-2 .u-input-1 {
+  background-image: none;
+}
+
+.u-section-2 .u-input-2 {
+  background-image: none;
+}
+
+.u-section-2 .u-btn-1 {
+  width: 100%;
+  padding: 10px 30px;
+}
+
+.u-section-2 .u-btn-2 {
+  border-style: none none solid;
+  margin: 30px auto 60px;
+  padding: 0;
+}
+
+@media (max-width: 1199px) {
+  .u-section-2 .u-btn-2 {
+    margin-top: 11px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-2 .u-btn-2 {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-2 .u-form-1 {
+    width: 540px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-2 .u-form-1 {
+    width: 340px;
+  }
+
+  .u-section-2 .u-btn-2 {
+    margin-top: 10px;
+  }
+}
