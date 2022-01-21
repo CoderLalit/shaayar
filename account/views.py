@@ -22,10 +22,14 @@ def signup(request):
             messages.error(request, 'password did not match.')
 
         else:
-            first_name = name.split(' ')[0]
-            last_name = name.split(' ')[1]
-            user = User.objects.create_user(username=username, first_name=first_name, last_name=last_name, email=email, password=pass1)
-            user.save()
+            try:
+                first_name = name.split(' ')[0]
+                last_name = name.split(' ')[1]
+                user = User.objects.create_user(username=username, first_name=first_name, last_name=last_name, email=email, password=pass1)
+                user.save()
+            except:
+                user = User.objects.create_user(username=username, first_name=name, email=email, password=pass1)
+                user.save()
             
             return render(request, 'Home.html')
             messages.success(request, 'User Successfully Created')
