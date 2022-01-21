@@ -1,1 +1,1 @@
-web: gunicorn shaayri.wsgi --log-file -
+web: gunicorn shaayri.wsgi
