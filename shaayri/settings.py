@@ -38,8 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'account',
-    'poetrydb',
+    'account.apps.AccountConfig',
+    'poetrydb.apps.PoetrydbConfig',
+    'comment.apps.CommentConfig',
 ]
 
 MIDDLEWARE = [

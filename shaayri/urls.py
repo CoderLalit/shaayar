@@ -31,7 +31,6 @@ urlpatterns = [
     path('dashboard/edit/<poem_id>', views.edit),
     path('dashboard/edit/delete/<poem_id>', views.delete),
     path('read/<poem_id>', views.focus),
-
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]

@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from poetrydb.models import Poem
+from comment.models import Comment
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
 
@@ -21,6 +22,7 @@ def index(request):
             messages.error(request, 'Either username or password is incorrect')
 
     return render(request, 'Home.html')
+
 
 def logout(request):
     auth.logout(request)
@@ -58,7 +60,23 @@ def dashboard(request):
 
 def focus(request, poem_id):
     poem = Poem.objects.get(poemID=poem_id)
-    return render(request, 'focus.html', {'poem': poem})
+    comment_obj = Comment.objects.filter(poem_id=poem_id).values()
+    user_id = request.user.username
+
+    if request.method == 'POST':
+        comment_text = request.POST['commentContent']
+
+        try:
+            comment_obj = Comment.objects.create(poem_id=poem_id, user_commented=user_id, comment_content=comment_text)
+            comment_obj.save()
+            return redirect('focus')
+
+        except:
+            path = '/read/' + poem_id
+            return redirect(path)
+
+    return render(request, 'focus.html', {'poem': poem, 'com': comment_obj})
+    
 
 def edit(request, poem_id):
     poem = Poem.objects.get(poemID=poem_id)
@@ -94,3 +112,15 @@ def delete(request, poem_id):
     except:
         msg = 'something went wrong. Could not delete : ' + poem_obj.title
         messages.error(request, msg)
+
+# def comment(request, poem_id, user_id):
+#     if request.method == 'POST':
+#         comment = request.POST['commentContent']
+
+#         try:
+#             comment_obj = Comment.objects.create(poem_id=poem_id, user_commented=user_id, comment_content=comment)
+#             comment_obj.save()
+#             return render(request, 'read.html')
+
+#         except:
+#             messages.error(request, 'Something Went Wrong')

@@ -96,14 +96,48 @@
                 <!-- go back button -->
                 <a href="/read"><button type="button" class="btn btn-outline-primary">Back</button></a>
 
+                <br><br><hr>
+                <!-- comment section -->
+                  <form action="/read/{{poem.poemID}}" method="post" class="row row-cols-lg-auto g-3 align-items-center">
+                    {% csrf_token %}
+                      <div class="input-group">
+                        <input type="text" name="commentContent" class="form-control" id="inlineFormInputGroupUsername" placeholder="enter your comment here..." required>
+                        <span id="basic-addon2">
+
+                        {% if user.is_authenticated %}
+                          <div class="col-12">
+                            <a href="/read/{{poem.poemID}}"><button type="submit" class="btn btn-primary">comment</button></a>
+                          </div>
+                        {% endif %}
+                    
+                        <!-- if user is not authenticated ask to login  -->
+                        {% if not user.is_authenticated %}
+                              <div class="col-12">
+                                <button class="btn btn-primary" onclick="alert('Please Login To Comment !')">comment</button>
+                              </div>
+                        {% endif %}
+                    
+                        </span>
+                      </div>
+                  </form>
             </div>
+
+            <!-- display all comments -->
+            <div class="container">
+              <ul class="list-group list-group-flush">
+                {% for comm in com %}
+                    <li class="list-group-item"><strong>{{comm.user_commented}} :</strong>&nbsp; &nbsp;{{comm.comment_content}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+
         </div>
     </section>
 
     <br><br>
 
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-436c"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">Ⓒ shaayri.com All right reserved.</p>
+        <p class="u-small-text u-text u-text-variant u-text-1">Ⓒ shaayar.com All right reserved.</p>
       </div>
     </footer>
 

@@ -103,7 +103,7 @@
                     <!-- go back button -->
                 <a href="/dashboard"><button type="button" class="btn btn-outline-primary">Back</button></a>
                 <button type="submit" class="btn btn-outline-primary">Update</button>
-                <a href="/dashboard/edit/delete/{{poem.poemID}}"><button type="button" class="btn btn-outline-primary" >Delete</button></a>
+                <a href="/dashboard/edit/delete/{{poem.poemID}}"><button type="button" class="btn btn-outline-primary" onclick="confirm('Are you sure you want to delete?')">Delete</button></a>
 
             </form>
             </div>
